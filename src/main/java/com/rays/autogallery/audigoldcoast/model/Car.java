@@ -1,12 +1,7 @@
 package com.rays.autogallery.audigoldcoast.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
 public class Car {
 	
-	@Id
 	private long carId;
 	private long mileage;
 	private String name;

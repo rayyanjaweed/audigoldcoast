@@ -26,3 +26,5 @@ hs_err_pid*
 .mvn/wrapper/MavenWrapperDownloader.java
 mvnw
 mvnw.cmd
+/target/
+/bin/
