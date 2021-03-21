@@ -19,7 +19,7 @@ import com.rays.autogallery.audigoldcoast.service.CarService;
 public class CarController {
 	
 	@Autowired
-	CarService carService;
+	private CarService carService;
 	
 	@GetMapping(path="/cars/{carId}" )
 	public Car getCar(@PathVariable String carId) {
