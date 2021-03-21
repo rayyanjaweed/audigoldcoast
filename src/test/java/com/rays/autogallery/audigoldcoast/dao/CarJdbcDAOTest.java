@@ -7,15 +7,15 @@ import org.junit.Test;
 
 import com.rays.autogallery.audigoldcoast.model.Car;
 
-public class CarDAOTest {
+public class CarJdbcDAOTest {
 	
-	CarDAO cdao;
+	CarJdbcDAO cdao;
 	Car audi;
 	
 	@Before
 	public void intialize() {
-		cdao = new CarDAO();
-		audi = cdao.findCarByCarName("audi");
+		cdao = new CarJdbcDAO();
+//		audi = cdao.findCarByCarName("audi");
 	}
 	
 
@@ -32,7 +32,7 @@ public class CarDAOTest {
 	}
 	
 	public void deleteCarTest() {
-		assertFalse(cdao.deleteCar(1));
+		assertFalse(cdao.deleteyById(1));
 	}
 
 }

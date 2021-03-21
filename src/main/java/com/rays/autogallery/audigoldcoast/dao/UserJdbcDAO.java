@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.rays.autogallery.audigoldcoast.model.User;
 
 @Repository
-public class UserDAO {
+public class UserJdbcDAO {
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;

@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rays.autogallery.audigoldcoast.dao.UserDAO;
+import com.rays.autogallery.audigoldcoast.dao.UserJdbcDAO;
 import com.rays.autogallery.audigoldcoast.model.User;
 
 @Service
 public class UserService {
 	
 	@Autowired
-	private UserDAO userDao;
+	private UserJdbcDAO userDao;
 
 	public List<User> getAllUsers() {
 		return userDao.findAllUsers();

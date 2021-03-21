@@ -1,12 +1,31 @@
 package com.rays.autogallery.audigoldcoast.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="cars")
+@NamedQuery(name="find_all_cars", query="select c from Car c")
 public class Car {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="carId")
 	private long carId;
+	@Column(name="mileage")
 	private long mileage;
+	@Column(name="name")
 	private String name;
+	@Column(name="make")
 	private String make;
+	@Column(name="model")
 	private String model;
+	@Column(name="type")
 	private String type;
 	
 	public Car() {
