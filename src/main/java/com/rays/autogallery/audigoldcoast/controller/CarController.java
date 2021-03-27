@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rays.autogallery.audigoldcoast.model.Car;
 import com.rays.autogallery.audigoldcoast.service.CarService;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class CarController {
 	
@@ -33,7 +34,6 @@ public class CarController {
 		return carService.getAllCars();
 	}
 	
-	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@PostMapping(path="/cars")
 	@ResponseStatus(HttpStatus.CREATED)
 	public long addCar(@RequestBody Car car) {
