@@ -3,6 +3,7 @@ package com.rays.autogallery.audigoldcoast.dao;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -14,6 +15,9 @@ public class CarDAO {
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
+	
+	@Value("${spring.datasource.url}")
+	private String datasourceUrl;
 
 	public Car findCarByCarId(long carId) {
 		return jdbcTemplate.queryForObject("SELECT * FROM cars WHERE carId=" + carId,
